@@ -1,0 +1,41 @@
+amr_count: 2
+base_port: 8080
+speedup_ratio: 3
+protocol_type: "vda5050"
+# vehicle_type : "differential_drive"
+vehicle_type : "steering_drive"
+visualization_publish_period : 0.05
+state_publish_period : 5.0
+control_period : 0.01
+amr_params:
+  mass_vehicle : 0.0
+  load_weight : 20.0
+  max_torque : 0.0 #20
+  friction_coeff : 0.05 
+  max_speed : 5.0
+  max_angular_speed: 1.0
+  max_acceleration : 3.0
+  max_deceleration : 3.5
+  max_angular_acceleration: 0.5
+  max_angular_deceleration: 0.5
+  max_rpm_deviation : 0.0
+  wheel_base: 0.52
+  wheel_radius: 0.078
+  turning_radius_min: 0.8
+  obstacle_avoidance: true
+  goal_tolerance: 0.05
+  waypoint_tolerance: 0.1
+  initial_pose: [0.0, 0.0, 0.0]
+  control_frequency: 20
+  safety_stop_distance: 0.2
+  emergency_stop_enabled: true
+  reverse_allowed: false
+  command_timeout: 5
+  response_timeout: 2
+  log_level: "info"
+  battery_capacity: 40
+  payload_max: 100
+  sensor_used:
+    lidar: true
+
+

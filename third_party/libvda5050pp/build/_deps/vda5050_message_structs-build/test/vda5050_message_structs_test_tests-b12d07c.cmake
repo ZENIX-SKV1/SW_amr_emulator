@@ -1,0 +1,5 @@
+add_test( [==[vda5050_message_structs - serialization]==] /home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test/vda5050_message_structs_test [==[vda5050_message_structs - serialization]==]  )
+set_tests_properties( [==[vda5050_message_structs - serialization]==] PROPERTIES WORKING_DIRECTORY /home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test)
+add_test( [==[vda5050_message_structs - equality]==] /home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test/vda5050_message_structs_test [==[vda5050_message_structs - equality]==]  )
+set_tests_properties( [==[vda5050_message_structs - equality]==] PROPERTIES WORKING_DIRECTORY /home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test)
+set( vda5050_message_structs_test_TESTS [==[vda5050_message_structs - serialization]==] [==[vda5050_message_structs - equality]==])

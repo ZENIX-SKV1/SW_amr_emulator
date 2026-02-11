@@ -1,0 +1,31 @@
+{
+  "headerId": 4000,
+  "timestamp": "2026-01-27T22:00:00.000Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "continuous-s-curve-r25",
+  "orderUpdateId": 0,
+  "nodes": [
+    { "nodeId": "P0", "sequenceId": 0, "released": true, "nodePosition": { "x": 0.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P1", "sequenceId": 2, "released": true, "nodePosition": { "x": 50.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P2", "sequenceId": 4, "released": true, "nodePosition": { "x": 75.0, "y": 25.0, "theta": 1.57 } },
+    { "nodeId": "P3", "sequenceId": 6, "released": true, "nodePosition": { "x": 100.0, "y": 50.0, "theta": 0.0 } }
+  ],
+  "edges": [
+    { 
+      "edgeId": "E1_APPROACH", "sequenceId": 1, "released": true, 
+      "startNodeId": "P0", "endNodeId": "P1", "maxSpeed": 1.0 
+    },
+    { 
+      "edgeId": "E2_CONTINUOUS_LEFT", "sequenceId": 3, "released": true, 
+      "startNodeId": "P1", "endNodeId": "P2", "maxSpeed": 0.4, 
+      "turnCenter": { "x": 50.0, "y": 25.0 } 
+    },
+    { 
+      "edgeId": "E3_CONTINUOUS_RIGHT", "sequenceId": 5, "released": true, 
+      "startNodeId": "P2", "endNodeId": "P3", "maxSpeed": 0.4, 
+      "turnCenter": { "x": 100.0, "y": 25.0 }
+    }
+  ]
+}

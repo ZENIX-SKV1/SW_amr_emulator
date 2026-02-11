@@ -1,0 +1,30 @@
+{
+  "headerId": 102,
+  "timestamp": "2026-02-04T10:00:00.000Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "compact-path-9.5m-001",
+  "orderUpdateId": 0,
+  "nodes": [
+    { "nodeId": "N1", "sequenceId": 0, "released": true, "nodePosition": { "x": 0.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "N2", "sequenceId": 2, "released": true, "nodePosition": { "x": 30.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "N3", "sequenceId": 4, "released": true, "nodePosition": { "x": 39.5, "y": 9.5, "theta": 1.5708 } },
+    { "nodeId": "N4", "sequenceId": 6, "released": true, "nodePosition": { "x": 39.5, "y": 45.0, "theta": 1.5708 } },
+    { "nodeId": "N5", "sequenceId": 8, "released": true, "nodePosition": { "x": 49.0, "y": 54.5, "theta": 0.0 } },
+    { "nodeId": "N6", "sequenceId": 10, "released": true, "nodePosition": { "x": 105.0, "y": 54.5, "theta": 0.0 } },
+    { "nodeId": "N7", "sequenceId": 12, "released": true, "nodePosition": { "x": 105.0, "y": 35.5, "theta": 3.1416 } },
+    { "nodeId": "N8", "sequenceId": 14, "released": true, "nodePosition": { "x": 75.0, "y": 35.5, "theta": 3.1416 } },
+    { "nodeId": "N9", "sequenceId": 16, "released": true, "nodePosition": { "x": 75.0, "y": 54.5, "theta": 0.0 } }
+  ],
+  "edges": [
+    { "edgeId": "E1", "sequenceId": 1, "released": true, "startNodeId": "N1", "endNodeId": "N2", "maxSpeed": 1.0 },
+    { "edgeId": "E2", "sequenceId": 3, "released": true, "startNodeId": "N2", "endNodeId": "N3", "maxSpeed": 0.3, "turnCenter": { "x": 30.0, "y": 9.5 } },
+    { "edgeId": "E3", "sequenceId": 5, "released": true, "startNodeId": "N3", "endNodeId": "N4", "maxSpeed": 1.0 },
+    { "edgeId": "E4", "sequenceId": 7, "released": true, "startNodeId": "N4", "endNodeId": "N5", "maxSpeed": 0.3, "turnCenter": { "x": 49.0, "y": 45.0 } },
+    { "edgeId": "E5", "sequenceId": 9, "released": true, "startNodeId": "N5", "endNodeId": "N6", "maxSpeed": 1.0 },
+    { "edgeId": "E6", "sequenceId": 11, "released": true, "startNodeId": "N6", "endNodeId": "N7", "maxSpeed": 0.3, "turnCenter": { "x": 105.0, "y": 45.0 } },
+    { "edgeId": "E7", "sequenceId": 13, "released": true, "startNodeId": "N7", "endNodeId": "N8", "maxSpeed": 1.0 },
+    { "edgeId": "E8", "sequenceId": 15, "released": true, "startNodeId": "N8", "endNodeId": "N9", "maxSpeed": 0.3, "turnCenter": { "x": 75.0, "y": 45.0 } }
+  ]
+}

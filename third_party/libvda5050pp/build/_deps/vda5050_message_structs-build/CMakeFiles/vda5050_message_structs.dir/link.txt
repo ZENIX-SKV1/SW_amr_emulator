@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libvda5050_message_structs.so.0 -o libvda5050_message_structs.so.2.1.0.3 CMakeFiles/vda5050_message_structs.dir/src/json.cpp.o 

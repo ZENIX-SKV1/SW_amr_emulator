@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/CMakeFiles/paho-mqtt-cpp-populate"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/CMakeFiles/paho-mqtt-cpp-populate.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/CMakeFiles/paho-mqtt-cpp-populate-complete.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-build.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-configure.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-download.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-install.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-patch.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-test.rule"
+		},
+		{
+			"file" : "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/paho-mqtt-cpp-subbuild/paho-mqtt-cpp-populate-prefix/src/paho-mqtt-cpp-populate-stamp/paho-mqtt-cpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"paho-mqtt-cpp-populate"
+		],
+		"name" : "paho-mqtt-cpp-populate"
+	}
+}

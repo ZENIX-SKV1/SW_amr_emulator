@@ -1,0 +1,221 @@
+{
+  "headerId": 0,
+  "timestamp": "2026-01-26T00:00:00.000Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "rounded-square-100x100-r26",
+  "orderUpdateId": 0,
+  "nodes": [
+    {
+      "nodeId": "NE4",
+      "sequenceId": 0,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 25.98,
+        "y": 0.0,
+        "mapId": "default_map",
+        "theta": 0.0,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NS1",
+      "sequenceId": 2,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 74.02,
+        "y": 0.0,
+        "mapId": "default_map",
+        "theta": 0.0,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NE1",
+      "sequenceId": 4,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 100.0,
+        "y": 25.98,
+        "mapId": "default_map",
+        "theta": 1.5707963267948966,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NS2",
+      "sequenceId": 6,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 100.0,
+        "y": 74.02,
+        "mapId": "default_map",
+        "theta": 1.5707963267948966,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NE2",
+      "sequenceId": 8,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 74.02,
+        "y": 100.0,
+        "mapId": "default_map",
+        "theta": 3.141592653589793,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NS3",
+      "sequenceId": 10,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 25.98,
+        "y": 100.0,
+        "mapId": "default_map",
+        "theta": 3.141592653589793,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NE3",
+      "sequenceId": 12,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 0.0,
+        "y": 74.02,
+        "mapId": "default_map",
+        "theta": -1.5707963267948966,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    },
+    {
+      "nodeId": "NS4",
+      "sequenceId": 14,
+      "released": false,
+      "actions": [],
+      "nodePosition": {
+        "x": 0.0,
+        "y": 25.98,
+        "mapId": "default_map",
+        "theta": -1.5707963267948966,
+        "allowedDeviationXY": 0.5,
+        "allowedDeviationTheta": 0.1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeId": "E0_STRAIGHT",
+      "sequenceId": 1,
+      "released": true,
+      "startNodeId": "NE4",
+      "endNodeId": "NS1",
+      "actions": [],
+      "maxSpeed": 2.0,
+      "edgeDescription": "Bottom straight, 48.04m"
+    },
+    {
+      "edgeId": "E1_CURVE_BR",
+      "sequenceId": 3,
+      "released": true,
+      "startNodeId": "NS1",
+      "endNodeId": "NE1",
+      "actions": [],
+      "maxSpeed": 3.5,
+      "turnCenter": {
+        "x": 74.02,
+        "y": 25.98
+      },
+      "edgeDescription": "Bottom-right corner, radius 25.98m"
+    },
+    {
+      "edgeId": "E2_STRAIGHT",
+      "sequenceId": 5,
+      "released": true,
+      "startNodeId": "NE1",
+      "endNodeId": "NS2",
+      "actions": [],
+      "maxSpeed": 2.0,
+      "edgeDescription": "Right straight, 48.04m"
+    },
+    {
+      "edgeId": "E3_CURVE_TR",
+      "sequenceId": 7,
+      "released": true,
+      "startNodeId": "NS2",
+      "endNodeId": "NE2",
+      "actions": [],
+      "maxSpeed": 3.5,
+      "turnCenter": {
+        "x": 74.02,
+        "y": 74.02
+      },
+      "edgeDescription": "Top-right corner, radius 25.98m"
+    },
+    {
+      "edgeId": "E4_STRAIGHT",
+      "sequenceId": 9,
+      "released": true,
+      "startNodeId": "NE2",
+      "endNodeId": "NS3",
+      "actions": [],
+      "maxSpeed": 2.0,
+      "edgeDescription": "Top straight, 48.04m"
+    },
+    {
+      "edgeId": "E5_CURVE_TL",
+      "sequenceId": 11,
+      "released": true,
+      "startNodeId": "NS3",
+      "endNodeId": "NE3",
+      "actions": [],
+      "maxSpeed": 0.5,
+      "turnCenter": {
+        "x": 25.98,
+        "y": 74.02
+      },
+      "edgeDescription": "Top-left corner, radius 25.98m"
+    },
+    {
+      "edgeId": "E6_STRAIGHT",
+      "sequenceId": 13,
+      "released": true,
+      "startNodeId": "NE3",
+      "endNodeId": "NS4",
+      "actions": [],
+      "maxSpeed": 2.0,
+      "edgeDescription": "Left straight, 48.04m"
+    },
+    {
+      "edgeId": "E7_CURVE_BL",
+      "sequenceId": 15,
+      "released": false,
+      "startNodeId": "NS4",
+      "endNodeId": "NE4",
+      "actions": [],
+      "maxSpeed": 0.5,
+      "turnCenter": {
+        "x": 25.98,
+        "y": 25.98
+      },
+      "edgeDescription": "Bottom-left corner, radius 25.98m"
+    }
+  ]
+}

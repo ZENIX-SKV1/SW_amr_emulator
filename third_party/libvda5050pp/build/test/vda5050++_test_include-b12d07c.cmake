@@ -1,0 +1,5 @@
+if(EXISTS "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/test/vda5050++_test_tests-b12d07c.cmake")
+  include("/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/test/vda5050++_test_tests-b12d07c.cmake")
+else()
+  add_test(vda5050++_test_NOT_BUILT-b12d07c vda5050++_test_NOT_BUILT-b12d07c)
+endif()

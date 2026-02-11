@@ -1,0 +1,42 @@
+site_name: libVDA5050++
+repo_url: https://git.openlogisticsfoundation.org/silicon-economy/libraries/vda5050/libvda5050pp
+theme:
+    name: material
+    highlightjs: true
+    hljs_style: github
+    palette:
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+              icon: material/brightness-auto
+              name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default 
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+            icon: material/brightness-4
+            name: Switch to system preference
+nav:
+    - Home: index.md
+    - Install: install.md
+    - Dependencies: dependencies.md
+    - Quickstart: quickstart.md
+    - Configuration: configuration.md
+    - API: api.md
+    - Development: development.md
+    - Doxygen: doxygen/html/index.html
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

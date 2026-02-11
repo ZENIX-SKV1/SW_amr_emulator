@@ -1,0 +1,23 @@
+{
+  "headerId": 600,
+  "orderId": "debug-spin-fix-008",
+  "orderUpdateId": 0,
+  "nodes": [
+    { "nodeId": "P0", "sequenceId": 0, "released": true, "nodePosition": { "x": 0.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P1", "sequenceId": 2, "released": true, "nodePosition": { "x": 50.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P2", "sequenceId": 4, "released": true, "nodePosition": { "x": 75.0, "y": 25.0, "theta": 1.57 } },
+    { "nodeId": "P2_STABLE", "sequenceId": 6, "released": true, "nodePosition": { "x": 75.0, "y": 30.0, "theta": 1.57 } }
+  ],
+  "edges": [
+    { "edgeId": "E1", "sequenceId": 1, "released": true, "startNodeId": "P0", "endNodeId": "P1", "maxSpeed": 1.0 },
+    { 
+      "edgeId": "E2_LEFT", "sequenceId": 3, "released": true, "startNodeId": "P1", "endNodeId": "P2", "maxSpeed": 0.3, 
+      "turnCenter": { "x": 50.0, "y": 25.0 },
+      "edgeDescription": "Very slow speed to prevent overshoot at the end of curve"
+    },
+    { 
+      "edgeId": "E_STABILIZER", "sequenceId": 5, "released": true, "startNodeId": "P2", "endNodeId": "P2_STABLE", "maxSpeed": 0.3,
+      "edgeDescription": "Longer 5m straight section to align heading"
+    }
+  ]
+}

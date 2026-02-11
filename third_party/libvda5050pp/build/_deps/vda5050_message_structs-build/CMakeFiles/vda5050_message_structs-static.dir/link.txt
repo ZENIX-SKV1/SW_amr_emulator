@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvda5050_message_structs-static.a "CMakeFiles/vda5050_message_structs-static.dir/src/json.cpp.o"
+/usr/bin/ranlib libvda5050_message_structs-static.a

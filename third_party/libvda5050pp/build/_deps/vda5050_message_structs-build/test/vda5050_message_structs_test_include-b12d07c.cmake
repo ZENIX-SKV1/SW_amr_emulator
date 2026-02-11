@@ -1,0 +1,5 @@
+if(EXISTS "/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test/vda5050_message_structs_test_tests-b12d07c.cmake")
+  include("/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/vda5050_message_structs-build/test/vda5050_message_structs_test_tests-b12d07c.cmake")
+else()
+  add_test(vda5050_message_structs_test_NOT_BUILT-b12d07c vda5050_message_structs_test_NOT_BUILT-b12d07c)
+endif()

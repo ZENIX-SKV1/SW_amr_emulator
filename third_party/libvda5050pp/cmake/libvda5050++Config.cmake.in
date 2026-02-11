@@ -1,0 +1,15 @@
+
+# Copyright Open Logistics Foundation
+# 
+# Licensed under the Open Logistics Foundation License 1.3.
+# For details on the licensing terms, see the LICENSE file.
+# SPDX-License-Identifier: OLFL-1.3
+# 
+
+@PACKAGE_INIT@
+
+@LIBVDA5050PP_INSTALL_CONFIG_EXTRA_LINES@
+
+find_package(Threads REQUIRED)
+find_package(vda5050_message_structs REQUIRED)
+include ( "${CMAKE_CURRENT_LIST_DIR}/libvda5050++BaseTargets.cmake" )

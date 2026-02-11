@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/vda5050_message_structs_test.dir/src/test.cpp.o -o vda5050_message_structs_test  ../libvda5050_message_structs-static.a ../../catch2-build/src/libCatch2Main.a ../../catch2-build/src/libCatch2.a 

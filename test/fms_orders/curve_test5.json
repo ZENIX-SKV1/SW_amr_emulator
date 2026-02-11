@@ -1,0 +1,47 @@
+{
+  "headerId": 3000,
+  "timestamp": "2026-01-27T21:00:00.000Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "complex-path-r25-safe",
+  "orderUpdateId": 0,
+  "nodes": [
+    { "nodeId": "P0", "sequenceId": 0, "released": true, "nodePosition": { "x": 0.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P1", "sequenceId": 2, "released": true, "nodePosition": { "x": 50.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P2", "sequenceId": 4, "released": true, "nodePosition": { "x": 75.0, "y": 25.0, "theta": 1.57 } },
+    { "nodeId": "P3", "sequenceId": 6, "released": true, "nodePosition": { "x": 75.0, "y": 50.0, "theta": 1.57 } },
+    { "nodeId": "P4", "sequenceId": 8, "released": true, "nodePosition": { "x": 100.0, "y": 75.0, "theta": 0.0 } },
+    { "nodeId": "P5", "sequenceId": 10, "released": true, "nodePosition": { "x": 130.0, "y": 75.0, "theta": 0.0 } },
+    { "nodeId": "P6", "sequenceId": 12, "released": true, "nodePosition": { "x": 130.0, "y": 125.0, "theta": 3.14 } }
+  ],
+  "edges": [
+    { 
+      "edgeId": "E1_START_STRAIGHT", "sequenceId": 1, "released": true, 
+      "startNodeId": "P0", "endNodeId": "P1", "maxSpeed": 1.0 
+    },
+    { 
+      "edgeId": "E2_LEFT_TURN", "sequenceId": 3, "released": true, 
+      "startNodeId": "P1", "endNodeId": "P2", "maxSpeed": 0.6, 
+      "turnCenter": { "x": 50.0, "y": 25.0 } 
+    },
+    { 
+      "edgeId": "E3_MID_STRAIGHT", "sequenceId": 5, "released": true, 
+      "startNodeId": "P2", "endNodeId": "P3", "maxSpeed": 1.0 
+    },
+    { 
+      "edgeId": "E4_RIGHT_TURN", "sequenceId": 7, "released": true, 
+      "startNodeId": "P3", "endNodeId": "P4", "maxSpeed": 0.6, 
+      "turnCenter": { "x": 100.0, "y": 50.0 }
+    },
+    { 
+      "edgeId": "E5_BEFORE_UTURN", "sequenceId": 9, "released": true, 
+      "startNodeId": "P4", "endNodeId": "P5", "maxSpeed": 1.0 
+    },
+    { 
+      "edgeId": "E6_UTURN_SAFE", "sequenceId": 11, "released": true, 
+      "startNodeId": "P5", "endNodeId": "P6", "maxSpeed": 0.4, 
+      "turnCenter": { "x": 130.0, "y": 100.0 }
+    }
+  ]
+}

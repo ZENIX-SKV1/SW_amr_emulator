@@ -1,0 +1,30 @@
+{
+  "headerId": 1100,
+  "timestamp": "2026-01-27T19:00:00.000Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "left-turn-only-test",
+  "orderUpdateId": 0,
+  "nodes": [
+    { "nodeId": "P0", "sequenceId": 0, "released": true, "nodePosition": { "x": 0.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P1", "sequenceId": 2, "released": true, "nodePosition": { "x": 50.0, "y": 0.0, "theta": 0.0 } },
+    { "nodeId": "P2", "sequenceId": 4, "released": true, "nodePosition": { "x": 75.0, "y": 25.0, "theta": 1.57 } },
+    { "nodeId": "P2_STABLE", "sequenceId": 6, "released": true, "nodePosition": { "x": 75.0, "y": 75.0, "theta": 1.57 } },
+    { "nodeId": "P3", "sequenceId": 8, "released": true, "nodePosition": { "x": 50.0, "y": 100.0, "theta": 3.14 } }
+  ],
+  "edges": [
+    { "edgeId": "E1", "sequenceId": 1, "released": true, "startNodeId": "P0", "endNodeId": "P1", "maxSpeed": 1.0 },
+    { 
+      "edgeId": "E2_LEFT_1", "sequenceId": 3, "released": true, "startNodeId": "P1", "endNodeId": "P2", "maxSpeed": 0.5, 
+      "turnCenter": { "x": 50.0, "y": 25.0 } 
+    },
+    { 
+      "edgeId": "E_STABILIZER", "sequenceId": 5, "released": true, "startNodeId": "P2", "endNodeId": "P2_STABLE", "maxSpeed": 1.0 
+    },
+    { 
+      "edgeId": "E3_LEFT_2", "sequenceId": 7, "released": true, "startNodeId": "P2_STABLE", "endNodeId": "P3", "maxSpeed": 0.5, 
+      "turnCenter": { "x": 50.0, "y": 75.0 }
+    }
+  ]
+}

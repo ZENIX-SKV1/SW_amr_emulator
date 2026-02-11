@@ -1,0 +1,73 @@
+{
+  "headerId": 0,
+  "timestamp": "2025-12-29T01:42:19.305756100Z",
+  "version": "2.0.0",
+  "manufacturer": "ZENIXROBOTICS",
+  "serialNumber": "0000",
+  "orderId": "93181054-240d-4c64-a3a7-768a522ebd93-0",
+  "orderUpdateId": 0,
+  "nodes": [
+    {
+      "nodeId": "PW1001_REAR",
+      "sequenceId": 0,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 396.0,
+        "y": 451.0,
+        "mapId": "default_map",
+        "theta": 1.5707963267948966,
+        "allowedDeviationXY": 1.0,
+        "allowedDeviationTheta": 3.141592653589793
+      }
+    },
+    {
+      "nodeId": "PW1001_subE_REAR",
+      "sequenceId": 2,
+      "released": true,
+      "actions": [],
+      "nodePosition": {
+        "x": 396.0,
+        "y": 469.0,
+        "mapId": "default_map",
+        "theta": 1.5707963267948966,
+        "allowedDeviationXY": 1.0,
+        "allowedDeviationTheta": 0.17453292519943295
+      }
+    },
+    {
+      "nodeId": "PPB023_REAR",
+      "sequenceId": 4,
+      "released": false,
+      "actions": [],
+      "nodePosition": {
+        "x": 396.0,
+        "y": 519.5,
+        "mapId": "default_map",
+        "theta": 1.5707963267948966,
+        "allowedDeviationXY": 1.0,
+        "allowedDeviationTheta": 0.17453292519943295
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeId": "PW1001_REAR --- PW1001_subE_REAR",
+      "sequenceId": 1,
+      "released": true,
+      "startNodeId": "PW1001_REAR",
+      "endNodeId": "PW1001_subE_REAR",
+      "actions": [],
+      "maxSpeed": 2.0
+    },
+    {
+      "edgeId": "PW1001_subE_REAR --- PPB023_REAR",
+      "sequenceId": 3,
+      "released": false,
+      "startNodeId": "PW1001_subE_REAR",
+      "endNodeId": "PPB023_REAR",
+      "actions": [],
+      "maxSpeed": 2.0
+    }
+  ]
+}

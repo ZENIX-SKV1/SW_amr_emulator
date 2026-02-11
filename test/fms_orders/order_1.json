@@ -1,0 +1,45 @@
+{
+  "headerId" : 1,
+  "timestamp" : "2026-01-21T05:34:41.731518100Z",
+  "version" : "2.0.0",
+  "manufacturer" : "ZENIXROBOTICS",
+  "serialNumber" : "0000",
+  "orderId" : "1f6e628a-e420-4ef7-9afd-187faa85c854-0",
+  "orderUpdateId" : 1,
+  "nodes" : [ {
+    "nodeId" : "PW1001_subE_REAR",
+    "sequenceId" : 2,
+    "released" : true,
+    "actions" : [ ],
+    "nodePosition" : {
+      "x" : 396.0,
+      "y" : 469.0,
+      "mapId" : "default_map",
+      "theta" : 1.5707963267948966,
+      "allowedDeviationXY" : 1.0,
+      "allowedDeviationTheta" : 0.17453292519943295
+    }
+  }, {
+    "nodeId" : "PPB023_REAR",
+    "sequenceId" : 4,
+    "released" : true,
+    "actions" : [ ],
+    "nodePosition" : {
+      "x" : 396.0,
+      "y" : 519.5,
+      "mapId" : "default_map",
+      "theta" : 1.5707963267948966,
+      "allowedDeviationXY" : 1.0,
+      "allowedDeviationTheta" : 0.17453292519943295
+    }
+  } ],
+  "edges" : [ {
+    "edgeId" : "PW1001_subE_REAR --- PPB023_REAR",
+    "sequenceId" : 3,
+    "released" : true,
+    "startNodeId" : "PW1001_subE_REAR",
+    "endNodeId" : "PPB023_REAR",
+    "actions" : [ ],
+    "maxSpeed" : 35.0
+  } ]
+}

@@ -1,0 +1,90 @@
+// Copyright Open Logistics Foundation
+//
+// Licensed under the Open Logistics Foundation License 1.3.
+// For details on the licensing terms, see the LICENSE file.
+// SPDX-License-Identifier: OLFL-1.3
+//
+
+
+#ifndef INCLUDE_VDA5050_OPERATINGMODE_H_
+#define INCLUDE_VDA5050_OPERATINGMODE_H_
+
+#include <cstdint>
+#include <ostream>
+#include <nlohmann/json.hpp>
+
+namespace vda5050 {
+enum class OperatingMode : uint8_t {
+  /// AGV is under full control of the supervisor.
+  /// AGV drives and executes actions based on
+  /// orders from the supervisor
+  AUTOMATIC,
+
+  /// AGV is under control of the supervisor. AGV
+  /// drives and executes actions based on orders
+  /// from the supervisor. The driving speeds is
+  /// controlled by the HMI. (speed can’t exceed
+  /// the speed of automatic mode) The steering is
+  /// under automatic control.
+  /// (non-safe HMI possible)
+  SEMIAUTOMATIC,
+
+  /// MC is not in control of the AGV. Supervisor
+  /// doesn’t send driving order or actions to the
+  /// AGV. HMI can be used to control the steering
+  /// and velocity and handling device of the AGV.
+  /// Location of the AGV is send to the MC. When
+  /// AGV enters or leaves this mode, it
+  /// immediately clears all the orders.
+  /// (safe HMI required)
+  MANUAL,
+
+  /// MC is not in control of the AGV. MC doesn’t
+  /// send driving order or actions to the AGV.
+  /// Authorized personal can reconfigure the AGV.
+  SERVICE,
+
+  /// MC is not in control of the AGV. Supervisor
+  /// doesn’t send driving order or actions to the
+  /// AGV. The AGV is being taught, e.g. mapping is
+  /// done by a MC
+  TEACHIN
+};
+
+///
+///\brief Write the enums value-name to an ostream
+///
+///\param os the stream
+///\param operating_mode the enum
+///\return constexpr std::ostream&
+///
+constexpr std::ostream &operator<<(std::ostream &os, const OperatingMode &operating_mode) {
+  switch (operating_mode) {
+    case OperatingMode::AUTOMATIC:
+      os << "AUTOMATIC";
+      break;
+    case OperatingMode::SEMIAUTOMATIC:
+      os << "SEMIAUTOMATIC";
+      break;
+    case OperatingMode::MANUAL:
+      os << "MANUAL";
+      break;
+    case OperatingMode::SERVICE:
+      os << "SERVICE";
+      break;
+    case OperatingMode::TEACHIN:
+      os << "TEACHIN";
+      break;
+    default:
+      os.setstate(std::ios_base::failbit);
+  }
+  return os;
+}
+
+using json = nlohmann::json;
+void to_json(json &j, const OperatingMode &d);
+void from_json(const json &j, OperatingMode &d);
+
+
+}  // namespace vda5050
+#endif  // INCLUDE_VDA5050_OPERATINGMODE_H_

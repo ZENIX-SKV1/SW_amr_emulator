@@ -1,0 +1,7 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The patch step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command (connected)=/usr/bin/cmake;-Dcan_fetch=YES;-P;/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/eventpp-subbuild/eventpp-populate-prefix/tmp/eventpp-populate-gitupdate.cmake
+command (disconnected)=/usr/bin/cmake;-Dcan_fetch=NO;-P;/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/eventpp-subbuild/eventpp-populate-prefix/tmp/eventpp-populate-gitupdate.cmake
+work_dir=/home/zenix/ros2_ws/src/amr_emulator/third_party/libvda5050pp/build/_deps/eventpp-src

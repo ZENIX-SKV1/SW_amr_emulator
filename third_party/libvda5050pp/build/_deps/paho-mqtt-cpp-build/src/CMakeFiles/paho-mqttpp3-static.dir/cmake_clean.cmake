@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/paho-mqttpp3-static.dir/async_client.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/async_client.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/client.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/client.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/connect_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/connect_options.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/create_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/create_options.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/disconnect_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/disconnect_options.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/iclient_persistence.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/iclient_persistence.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/message.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/message.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/properties.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/properties.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/reason_code.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/reason_code.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/response_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/response_options.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/server_response.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/server_response.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/ssl_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/ssl_options.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/string_collection.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/string_collection.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/token.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/token.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/topic.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/topic.cpp.o.d"
+  "CMakeFiles/paho-mqttpp3-static.dir/will_options.cpp.o"
+  "CMakeFiles/paho-mqttpp3-static.dir/will_options.cpp.o.d"
+  "libpaho-mqttpp3.a"
+  "libpaho-mqttpp3.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/paho-mqttpp3-static.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
