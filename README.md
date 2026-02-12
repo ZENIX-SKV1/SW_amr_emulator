@@ -1023,6 +1023,7 @@ r_{high}, & \left | v\right | > v_{med} \\
 terminate called after throwing an instance of 'mqtt::exception'
 what():  MQTT error [-1]: TCP/TLS connect failure
 Aborted (core dumped)
+
 2.
 ./run.sh: line 25:  8645 Aborted                 (core dumped) ./build/amr_emulator ./config/amr_params.yaml
 publish a order
