@@ -198,138 +198,6 @@ std::string Vda5050Protocol::detectConnection()
     return "ONLINE";
 }
 
-// FACTSHEET MESSAGE (factsheet.schema.json)
-// std::string Vda5050Protocol::makeFactsheetMessage()
-// {
-//     nlohmann::json factsheet_json;
-
-//     // Required Header Fields
-//     factsheet_json["headerId"] = factsheet_header_id_++;
-//     factsheet_json["timestamp"] = getCurrentTimestampISO8601();
-//     factsheet_json["version"] = "2.1.0";
-//     factsheet_json["manufacturer"] = "ZenixRobotics";
-//     factsheet_json["serialNumber"] = agv_id_;
-
-//     // typeSpecification (Required)
-//     nlohmann::json typeSpec;
-//     typeSpec["seriesName"] = "ZenixAMR";
-//     typeSpec["agvKinematic"] = "OMNI";
-//     typeSpec["agvClass"] = "CARRIER";
-//     typeSpec["maxLoadMass"] = 100.0;
-//     typeSpec["localizationTypes"] = nlohmann::json::array({"RFID"});
-//     typeSpec["navigationTypes"] = nlohmann::json::array({"AUTONOMOUS"});
-//     typeSpec["seriesDescription"] = "Zenix Autonomous Mobile Robot Series";
-//     factsheet_json["typeSpecification"] = typeSpec;
-
-//     // physicalParameters (Required)
-//     nlohmann::json physicalParams;
-//     physicalParams["speedMin"] = config_.amr_params.min_speed;
-//     physicalParams["speedMax"] = config_.amr_params.max_speed;
-//     physicalParams["accelerationMax"] = config_.amr_params.accelerationMax;
-//     physicalParams["decelerationMax"] = config_.amr_params.decelerationMax;
-//     physicalParams["heightMin"] = config_.amr_params.heightMin;
-//     physicalParams["heightMax"] = config_.amr_params.heightMax;
-//     physicalParams["width"] = config_.amr_params.width;
-//     physicalParams["length"] = config_.amr_params.length;
-//     factsheet_json["physicalParameters"] = physicalParams;
-
-//     // protocolLimits (Required)
-//     nlohmann::json protocolLimits;
-//     nlohmann::json maxStringLens;
-//     maxStringLens["msgLen"] = 10000;
-//     maxStringLens["topicSerialLen"] = 256;
-//     maxStringLens["topicElemLen"] = 256;
-//     maxStringLens["idLen"] = 256;
-//     maxStringLens["idNumericalOnly"] = false;
-//     maxStringLens["enumLen"] = 256;
-//     maxStringLens["loadIdLen"] = 256;
-//     protocolLimits["maxStringLens"] = maxStringLens;
-//     protocolLimits["maxArrayLens"] = nlohmann::json::object();
-    
-//     nlohmann::json timing;
-//     timing["minOrderInterval"] = 1.0;
-//     timing["minStateInterval"] = 1.0;
-//     timing["defaultStateInterval"] = 30.0;
-//     timing["visualizationInterval"] = 0.1;
-//     protocolLimits["timing"] = timing;
-//     factsheet_json["protocolLimits"] = protocolLimits;
-
-//     // protocolFeatures (Required)
-//     nlohmann::json protocolFeatures;
-//     nlohmann::json optionalParameters = nlohmann::json::array();
-//     optionalParameters.push_back({
-//         {"parameter", "trajectory"},
-//         {"support", "SUPPORTED"},
-//         {"description", "NURBS trajectory support"}
-//     });
-//     protocolFeatures["optionalParameters"] = optionalParameters;
-    
-//     nlohmann::json agvActions = nlohmann::json::array();
-//     nlohmann::json pickAction;
-//     pickAction["actionType"] = "pick";
-//     pickAction["actionDescription"] = "Pick up a load";
-//     pickAction["actionScopes"] = nlohmann::json::array({"NODE"});
-    
-//     nlohmann::json pickParams = nlohmann::json::array();
-//     pickParams.push_back({
-//         {"key", "stationType"},
-//         {"valueDataType", "STRING"},
-//         {"description", "Type of station"},
-//         {"isOptional", false}
-//     });
-//     pickAction["actionParameters"] = pickParams;
-//     pickAction["resultDescription"] = "Load picked successfully";
-//     agvActions.push_back(pickAction);
-//     protocolFeatures["agvActions"] = agvActions;
-//     factsheet_json["protocolFeatures"] = protocolFeatures;
-
-//     // agvGeometry (Required)
-//     nlohmann::json agvGeometry;
-//     nlohmann::json envelopes2d = nlohmann::json::array();
-//     nlohmann::json envelope;
-//     envelope["set"] = "default";
-//     nlohmann::json polygonPoints = nlohmann::json::array();
-//     polygonPoints.push_back({{"x", -0.5}, {"y", -0.4}});
-//     polygonPoints.push_back({{"x", 0.5}, {"y", -0.4}});
-//     polygonPoints.push_back({{"x", 0.5}, {"y", 0.4}});
-//     polygonPoints.push_back({{"x", -0.5}, {"y", 0.4}});
-//     envelope["polygonPoints"] = polygonPoints;
-//     envelope["description"] = "Base footprint";
-//     envelopes2d.push_back(envelope);
-//     agvGeometry["envelopes2d"] = envelopes2d;
-//     agvGeometry["envelopes3d"] = nlohmann::json::array();
-//     factsheet_json["agvGeometry"] = agvGeometry;
-
-//     // loadSpecification (Required)
-//     nlohmann::json loadSpec;
-//     loadSpec["loadPositions"] = nlohmann::json::array({"top"});
-    
-//     nlohmann::json loadSets = nlohmann::json::array();
-//     nlohmann::json loadSet;
-//     loadSet["setName"] = "europalette";
-//     loadSet["loadType"] = "EPAL";
-//     loadSet["loadPositions"] = nlohmann::json::array({"top"});
-//     loadSet["boundingBoxReference"] = {
-//         {"x", 0.0},
-//         {"y", 0.0},
-//         {"z", 0.0},
-//         {"theta", 0}
-//     };
-//     loadSet["loadDimensions"] = {
-//         {"length", 1.2},
-//         {"width", 0.8},
-//         {"height", 0.15}
-//     };
-//     loadSet["maxWeight"] = 100.0;
-//     loadSet["minLoadhandlingHeight"] = 0.0;
-//     loadSet["maxLoadhandlingHeight"] = 1.5;
-//     loadSets.push_back(loadSet);
-//     loadSpec["loadSets"] = loadSets;
-//     factsheet_json["loadSpecification"] = loadSpec;
-
-//     return factsheet_json.dump();
-// }
-
 std::string Vda5050Protocol::makeFactsheetMessage()
 {
     nlohmann::json factsheet_json;
@@ -966,166 +834,6 @@ void Vda5050Protocol::parseOrderEdges(const nlohmann::json& edges_json)
     }
 }
 
-// bool Vda5050Protocol::validateOrder(const nlohmann::json& order_json, std::string& error_type, std::string& error_desc)
-// {
-//     // Check required fields
-//     if (!order_json.contains("orderId"))
-//     {
-//         error_type = "orderError";
-//         error_desc = "Missing required field: orderId";
-//         return false;
-//     }
-    
-//     if (!order_json.contains("orderUpdateId"))
-//     {
-//         error_type = "orderError";
-//         error_desc = "Missing required field: orderUpdateId";
-//         return false;
-//     }
-    
-//     if (!order_json.contains("nodes") || !order_json["nodes"].is_array())
-//     {
-//         error_type = "orderError";
-//         error_desc = "Missing or invalid nodes array";
-//         return false;
-//     }
-    
-//     if (!order_json.contains("edges") || !order_json["edges"].is_array())
-//     {
-//         error_type = "orderError";
-//         error_desc = "Missing or invalid edges array";
-//         return false;
-//     }
-  
-//     // VDA5050 표준: Node는 짝수(0,2,4...), Edge는 홀수(1,3,5...)
-//     const auto& nodes = order_json["nodes"];
-//     const auto& edges = order_json["edges"];
-    
-//     // Node sequenceId 검증: 짝수여야 함
-//     for (size_t i = 0; i < nodes.size(); ++i)
-//     {
-//         if (!nodes[i].contains("sequenceId"))
-//         {
-//             error_type = "orderError";
-//             error_desc = "Node missing sequenceId";
-//             return false;
-//         }
-        
-//         int seq = nodes[i]["sequenceId"].get<int>();
-//         if (seq % 2 != 0)  // 홀수이면 에러
-//         {
-//             error_type = "orderError";
-//             error_desc = "Node has odd sequenceId (should be even): " + std::to_string(seq);
-//             return false;
-//         }
-//     }
-    
-//     // Edge sequenceId 검증: 홀수여야 함
-//     for (size_t i = 0; i < edges.size(); ++i)
-//     {
-//         if (!edges[i].contains("sequenceId"))
-//         {
-//             error_type = "orderError";
-//             error_desc = "Edge missing sequenceId";
-//             return false;
-//         }
-        
-//         int seq = edges[i]["sequenceId"].get<int>();
-//         if (seq % 2 == 0)  // 짝수이면 에러
-//         {
-//             error_type = "orderError";
-//             error_desc = "Edge has even sequenceId (should be odd): " + std::to_string(seq);
-//             return false;
-//         }
-//     }
-
-//     double wheel_base = 9.3; // todo : from /config/amr_params.yaml
-//     double max_steer_angle = 30.0 * M_PI / 180.0; // 라디안 변환
-//     double min_radius = wheel_base / std::tan(max_steer_angle);
-
-//     for (const auto& edge : order_json["edges"]) {
-//         if (edge.contains("turnCenter")) {
-//             double tx = edge["turnCenter"]["x"];
-//             double ty = edge["turnCenter"]["y"];
-            
-//             // 시작/끝 노드 검색
-//             std::string start_id = edge["startNodeId"];
-//             std::string end_id = edge["endNodeId"];
-//             auto nodes_json = order_json["nodes"];
-            
-//             auto s_it = std::find_if(nodes_json.begin(), nodes_json.end(), [&](const nlohmann::json& n){ return n["nodeId"] == start_id; });
-//             auto e_it = std::find_if(nodes_json.begin(), nodes_json.end(), [&](const nlohmann::json& n){ return n["nodeId"] == end_id; });
-
-//             if (s_it != nodes_json.end() && (*s_it).contains("nodePosition")) {
-//                 double sx = (*s_it)["nodePosition"]["x"];
-//                 double sy = (*s_it)["nodePosition"]["y"];
-//                 double stheta = (*s_it)["nodePosition"].value("theta", 0.0);
-                
-//                 // (A) 최소 반경 검증
-//                 double radius = std::hypot(tx - sx, ty - sy);
-//                 if (radius < min_radius) {
-//                     error_type = "noRouteError";
-//                     error_desc = "Radius too small: " + std::to_string(radius) + "m < min " + std::to_string(min_radius) + "m";
-//                     return false;
-//                 }
-
-//                 // (B) 기하학적 특이점(Singularity) 검증
-//                 // 진입 방향 벡터와 중심점 벡터 사이의 각도 계산
-//                 double dx = tx - sx;
-//                 double dy = ty - sy;
-//                 double angle_to_center = std::atan2(dy, dx);
-                
-//                 // 헤딩 방향과 중심점 방향의 차이가 0도 또는 180도 부근이면 방향 판정 불가
-//                 double diff = std::abs(std::remainder(stheta - angle_to_center, M_PI));
-//                 if (diff < 0.1 || diff > (M_PI - 0.1)) { // 약 5.7도 임계치
-//                     error_type = "noRouteError";
-//                     error_desc = "Geometric Singularity: turnCenter is on the heading line. Direction ambiguous.";
-//                     return false;
-//                 }
-
-//                 // (C) 원호 정합성 검증 (끝 노드 기준 반경도 동일한지 확인)
-//                 if (e_it != nodes_json.end() && (*e_it).contains("nodePosition")) {
-//                     double ex = (*e_it)["nodePosition"]["x"];
-//                     double ey = (*e_it)["nodePosition"]["y"];
-//                     double end_radius = std::hypot(tx - ex, ty - ey);
-//                     if (std::abs(radius - end_radius) > 0.5) { // 0.5m 오차 허용
-//                         error_type = "noRouteError";
-//                         error_desc = "Invalid Arc: Start and End nodes have different radii from turnCenter.";
-//                         return false;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-//     // for (const auto& edge : order_json["edges"]) {
-//     //     if (edge.contains("turnCenter")) {
-//     //         double tx = edge["turnCenter"]["x"];
-//     //         double ty = edge["turnCenter"]["y"];
-            
-//     //         // 시작 노드 좌표 가져오기 (반경 계산용)
-//     //         std::string start_node_id = edge["startNodeId"];
-//     //         auto start_node_it = std::find_if(order_json["nodes"].begin(), order_json["nodes"].end(),
-//     //             [&](const nlohmann::json& n) { return n["nodeId"] == start_node_id; });
-
-//     //         if (start_node_it != order_json["nodes"].end()) {
-//     //             double sx = (*start_node_it)["nodePosition"]["x"];
-//     //             double sy = (*start_node_it)["nodePosition"]["y"];
-                
-//     //             double calculated_radius = std::hypot(tx - sx, ty - sy);
-
-//     //             if (calculated_radius < min_radius) {
-//     //                 error_desc = "Invalid turnCenter: Radius (" + std::to_string(calculated_radius) + 
-//     //                                     "m) is smaller than AMR's minimum radius (" + std::to_string(min_radius) + "m)";
-//     //                 return false; // 검증 실패
-//     //             }
-//     //         }
-//     //     }
-//     // }
-
-//     return true;
-// }
-
 bool Vda5050Protocol::validateOrder(const nlohmann::json& order_json, 
                                     std::string& error_type, std::string& error_desc)
 {
@@ -1159,24 +867,15 @@ bool Vda5050Protocol::validateOrder(const nlohmann::json& order_json,
                 
                 double radius = std::hypot(tx - sx, ty - sy);
                 
-                // (A) 물리적 최소 반경 검증
-                if (radius < min_radius) {
+                // 물리적 최소 반경 검증
+                if (radius < config_.amr_params.min_turn_radius) {
                     error_type = "noRouteError";
                     error_desc = "Radius too small: " + std::to_string(radius) + 
                                 "m < min " + std::to_string(min_radius) + "m";
                     return false;
                 }
                 
-                // ★ (A-2) Pure Pursuit 안정성 검증
-                if (radius < min_safe_radius) {
-                    error_type = "noRouteError";
-                    error_desc = "Radius too small for stable tracking: " + 
-                                std::to_string(radius) + "m < safe min " + 
-                                std::to_string(min_safe_radius) + "m";
-                    return false;
-                }
-
-                // (B) 기하학적 특이점 검증
+                // 기하학적 특이점 검증
                 double dx = tx - sx;
                 double dy = ty - sy;
                 double angle_to_center = std::atan2(dy, dx);
@@ -1200,34 +899,6 @@ bool Vda5050Protocol::validateOrder(const nlohmann::json& order_json,
                         return false;
                     }
                 }
-                
-                // ★ (D) 호의 각도 범위 검증 (너무 급격한 회전 방지)
-                // if (e_it != nodes_json.end() && (*e_it).contains("nodePosition")) {
-                //     double ex = (*e_it)["nodePosition"]["x"];
-                //     double ey = (*e_it)["nodePosition"]["y"];
-                    
-                //     double start_angle = std::atan2(sy - ty, sx - tx);
-                //     double end_angle = std::atan2(ey - ty, ex - tx);
-                //     double arc_angle = std::abs(std::remainder(end_angle - start_angle, 2*M_PI));
-                    
-                //     // 180도 이상 회전은 위험
-                //     if (arc_angle > M_PI) {
-                //         error_type = "noRouteError";
-                //         error_desc = "Arc angle too large: " + 
-                //                     std::to_string(arc_angle * 180.0 / M_PI) + " deg";
-                //         return false;
-                //     }
-                    
-                //     // 작은 반경에서 급격한 각도 변화 방지
-                //     double max_allowed_angle = M_PI / 2.0;  // 90도
-                //     if (radius < min_safe_radius * 1.5 && arc_angle > max_allowed_angle) {
-                //         error_type = "noRouteError";
-                //         error_desc = "Sharp turn on small radius: arc=" + 
-                //                     std::to_string(arc_angle * 180.0 / M_PI) + 
-                //                     " deg, radius=" + std::to_string(radius) + "m";
-                //         return false;
-                //     }
-                // }
             }
         }
     }

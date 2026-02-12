@@ -1,6 +1,6 @@
 amr_count: 1
 base_port: 8080
-speedup_ratio: 1
+speedup_ratio: 10
 protocol_type: "vda5050"
 vehicle_type : "steering_drive"   #"differential_drive"
 control_period : 0.01
@@ -24,6 +24,7 @@ amr_params:
   max_rpm_deviation : 0.0
   wheel_base: 9.3   #0.52
   wheel_radius: 1.4 #0.078
+  min_turn_radius: 9.5 # R = (4.65 / tan(33)) + 0.9435 = 약 8.1[m] + 1.4[m](margin)     
   turning_radius_min: 0.8
   obstacle_avoidance: true
   goal_tolerance: 0.05

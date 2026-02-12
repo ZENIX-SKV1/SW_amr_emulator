@@ -22,6 +22,7 @@ struct AmrParams
     double heightMax;
     double width;
     double length;
+    double min_turn_radius;
 };
 
 struct BatteryParams 

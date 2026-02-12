@@ -22,6 +22,7 @@ AmrConfig YamlConfig::load(const std::string& filename)
 
     cfg.amr_params.wheel_radius = config["amr_params"]["wheel_radius"].as<double>();
     cfg.amr_params.wheel_base = config["amr_params"]["wheel_base"].as<double>();
+    cfg.amr_params.min_turn_radius = config["amr_params"]["min_turn_radius"].as<double>();
     cfg.amr_params.max_speed = config["amr_params"]["max_speed"].as<double>();
     cfg.amr_params.min_speed = config["amr_params"]["min_speed"].as<double>();
     cfg.amr_params.angularSpeedMax = config["amr_params"]["angularSpeedMax"].as<double>();
