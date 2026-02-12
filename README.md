@@ -1014,3 +1014,27 @@ r_{high}, & \left | v\right | > v_{med} \\
  10. 통합 테스트
  
 # 문의
+# Trouble shooting
+- 실행 과정에 아래 두가지 Error 발생시, MQTT broker가 없거나 브로커 미실행이 원인.
+  1.
+[Vda5050Protocol] Connecting to MQTT broker...
+[Vda5050Protocol] MQTT connection failed: MQTT error [-1]: TCP/TLS connect failure
+terminate called after throwing an instance of 'mqtt::exception'
+what():  MQTT error [-1]: TCP/TLS connect failure
+Aborted (core dumped)
+2.
+./run.sh: line 25:  8645 Aborted                 (core dumped) ./build/amr_emulator ./config/amr_params.yaml
+publish a order
+./run.sh: line 29: mosquitto_pub: command not found
+
+# mosquitto 설치방법
+
+sudo apt update
+sudo apt install mosquitto-clients
+
+sudo apt install mosquitto mosquitto-clients
+
+브로커 실행
+
+sudo systemctl start mosquitto
+sudo systemctl enable mosquitto
