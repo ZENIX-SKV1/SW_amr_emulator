@@ -1016,7 +1016,8 @@ r_{high}, & \left | v\right | > v_{med} \\
 # 문의
 # Trouble shooting
 - 실행 과정에 아래 두가지 Error 발생시, MQTT broker가 없거나 브로커 미실행이 원인.
-  1.
+
+1.
 [Vda5050Protocol] Connecting to MQTT broker...
 [Vda5050Protocol] MQTT connection failed: MQTT error [-1]: TCP/TLS connect failure
 terminate called after throwing an instance of 'mqtt::exception'
