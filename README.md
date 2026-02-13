@@ -1040,3 +1040,22 @@ sudo apt install mosquitto mosquitto-clients
 
 sudo systemctl start mosquitto
 sudo systemctl enable mosquitto
+
+# make err
+make[2]: *** [CMakeFiles/amr_emulator.dir/build.make:440: amr_emulator] Error 1
+make[1]: *** [CMakeFiles/Makefile2:489: CMakeFiles/amr_emulator.dir/all] Error 2
+
+조치
+make clean 후  make -j4(4코어)
+
+# tf err
+No tf data. Actual error: Frame [map] does not exist
+임시 조치
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world map
+영구조치
+./run.sh파일에 아래 내용 추가
+#world -> map 정적 변환 게시 (맨 앞에서 실행)
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world map &
+
+# agv 마커 추가
+Display add > By topic > /agv_0_marker 추가
