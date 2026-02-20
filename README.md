@@ -23,7 +23,10 @@ AMR Emulator는 실제 AMR(Autonomous Mobile Robot) 하드웨어 없이 VDA5050 
 # Build 및 실행
 - dependency
 ```
-# Ubuntu 20.04/22.04
+sudo apt update
+
+sudo apt install mosquitto mosquitto-clients
+
 sudo apt install -y \
     build-essential \
     cmake \
