@@ -16,7 +16,7 @@ rviz2 &
 
 sleep 1
 
-./test/driving_viewer &
+./build/third_party/driving_viewer/driving_viewer ./config/amr_params.yaml &
 
 sleep 3
 

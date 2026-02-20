@@ -26,6 +26,7 @@ include_directories(
     )
 add_subdirectory(third_party/yaml-cpp)
 add_subdirectory(third_party/libvda5050pp)
+add_subdirectory(third_party/driving_viewer)
 file(GLOB_RECURSE SOURCES src/*.cpp)
 add_executable(amr_emulator ${SOURCES})
 # target_link_libraries(amr_emulator yaml-cpp ws2_32)
