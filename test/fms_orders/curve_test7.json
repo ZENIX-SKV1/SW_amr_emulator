@@ -20,13 +20,57 @@
   ],
   "edges": [
     { "edgeId": "E1_STR_30M", "sequenceId": 1, "released": true, "startNodeId": "N1", "endNodeId": "N2", "maxSpeed": 1.0 },
-    { "edgeId": "E2_LEFT_90", "sequenceId": 3, "released": true, "startNodeId": "N2", "endNodeId": "N3", "maxSpeed": 0.4, "turnCenter": { "x": 30.0, "y": 25.0 } },
+    { "edgeId": "E2_LEFT_90", "sequenceId": 3, "released": true, "startNodeId": "N2", "endNodeId": "N3", "maxSpeed": 0.4, 
+      "actions": [
+        {
+          "actionId": "turnCenter_1",
+          "actionType": "turnCenter",
+          "actionParameters": [
+            {"key": "x", "value": 30.0},
+            {"key": "y", "value": 25.0}
+          ]
+        }
+      ]
+    },
     { "edgeId": "E3_STR_20M", "sequenceId": 5, "released": true, "startNodeId": "N3", "endNodeId": "N4", "maxSpeed": 1.0 },
-    { "edgeId": "E4_RIGHT_90", "sequenceId": 7, "released": true, "startNodeId": "N4", "endNodeId": "N5", "maxSpeed": 0.4, "turnCenter": { "x": 80.0, "y": 45.0 } },
+    { "edgeId": "E4_RIGHT_90", "sequenceId": 7, "released": true, "startNodeId": "N4", "endNodeId": "N5", "maxSpeed": 0.4, 
+      "actions": [
+        {
+          "actionId": "turnCenter_2",
+          "actionType": "turnCenter",
+          "actionParameters": [
+            {"key": "x", "value": 80.0},
+            {"key": "y", "value": 45.0}
+          ]
+        }
+      ]
+    },
     { "edgeId": "E5_STR_20M", "sequenceId": 9, "released": true, "startNodeId": "N5", "endNodeId": "N6", "maxSpeed": 1.0 },
-    { "edgeId": "E6_RIGHT_UTURN", "sequenceId": 11, "released": true, "startNodeId": "N6", "endNodeId": "N7", "maxSpeed": 0.4, "turnCenter": { "x": 100.0, "y": 45.0 } },
+    { "edgeId": "E6_RIGHT_UTURN", "sequenceId": 11, "released": true, "startNodeId": "N6", "endNodeId": "N7", "maxSpeed": 0.4, 
+      "actions": [
+        {
+          "actionId": "turnCenter_3",
+          "actionType": "turnCenter",
+          "actionParameters": [
+            {"key": "x", "value": 100.0},
+            {"key": "y", "value": 45.0}
+          ]
+        }
+      ]
+    },
     { "edgeId": "E7_STR_20M", "sequenceId": 13, "released": true, "startNodeId": "N7", "endNodeId": "N8", "maxSpeed": 1.0 },
-    { "edgeId": "E8_LEFT_UTURN", "sequenceId": 15, "released": true, "startNodeId": "N8", "endNodeId": "N9", "maxSpeed": 0.4, "turnCenter": { "x": 80.0, "y": 45.0 } },
+    { "edgeId": "E8_LEFT_UTURN", "sequenceId": 15, "released": true, "startNodeId": "N8", "endNodeId": "N9", "maxSpeed": 0.4, 
+      "actions": [
+        {
+          "actionId": "turnCenter_4",
+          "actionType": "turnCenter",
+          "actionParameters": [
+            {"key": "x", "value": 80.0},
+            {"key": "y", "value": 45.0}
+          ]
+        }
+      ]
+    },
     { "edgeId": "E9_STR_30M", "sequenceId": 17, "released": true, "startNodeId": "N9", "endNodeId": "N10", "maxSpeed": 1.0 }
   ]
 }

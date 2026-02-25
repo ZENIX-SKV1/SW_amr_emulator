@@ -11,6 +11,9 @@ cleanup() {
 # SIGINT(Ctrl+C) 신호를 받으면 cleanup 함수 호출
 trap cleanup SIGINT
 
+#world -> map 정적 변환 게시 (맨 앞에서 실행) 
+
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world map &
 
 rviz2 &
 
@@ -26,7 +29,7 @@ sleep 3
 
 echo "publish a order"
 
-mosquitto_pub -h localhost -p 1883 -t "agv/v2/ZENIXROBOTICS/0000/order" -f ./test/fms_orders/curve.json
+mosquitto_pub -h localhost -p 1883 -t "agv/v2/ZENIXROBOTICS/0000/order" -f ./test/fms_orders/curve_custom.json
 
 echo "모든 프로세스가 실행 중입니다. 중단하려면 Ctrl+C를 누르세요."
 

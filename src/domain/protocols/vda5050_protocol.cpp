@@ -785,25 +785,8 @@ void Vda5050Protocol::parseOrderEdges(const nlohmann::json& edges_json)
         }
         
         // ========================================
-        // turnCenter 파싱
-        // ========================================
-        if (edge_json.contains("turnCenter") && edge_json["turnCenter"].is_object())
-        {
-            const auto& tc = edge_json["turnCenter"];
-            if (tc.contains("x") && tc.contains("y"))
-            {
-                edge.turnCenter.x = tc["x"].get<double>();
-                edge.turnCenter.y = tc["y"].get<double>();
-                edge.hasTurnCenter = true;
-                
-                std::cout << "[Vda5050Protocol] Edge " << edge.edgeId 
-                          << " has turnCenter: (" << edge.turnCenter.x 
-                          << ", " << edge.turnCenter.y << ")" << std::endl;
-            }
-        }
-        
-        
         // Parse actions
+        // ========================================
         if (edge_json.contains("actions") && edge_json["actions"].is_array())
         {
             for (const auto& action_json : edge_json["actions"])
@@ -813,6 +796,31 @@ void Vda5050Protocol::parseOrderEdges(const nlohmann::json& edges_json)
                 action.actionType = action_json.value("actionType", "");
                 action.actionDescription = action_json.value("actionDescription", "");
                 action.blockingType = action_json.value("blockingType", "NONE");
+                
+                // turnCenter 액션 타입 처리
+                if (action.actionType == "turnCenter")
+                {
+                    if (action_json.contains("actionParameters") && action_json["actionParameters"].is_array())
+                    {
+                        for (const auto& param_json : action_json["actionParameters"])
+                        {
+                            std::string key = param_json.value("key", "");
+                            if (key == "x")
+                            {
+                                edge.turnCenter.x = param_json["value"].get<double>();
+                            }
+                            else if (key == "y")
+                            {
+                                edge.turnCenter.y = param_json["value"].get<double>();
+                            }
+                        }
+                        edge.hasTurnCenter = true;
+                        
+                        std::cout << "[Vda5050Protocol] Edge " << edge.edgeId 
+                                  << " has turnCenter from action: (" << edge.turnCenter.x 
+                                  << ", " << edge.turnCenter.y << ")" << std::endl;
+                    }
+                }
                 
                 if (action_json.contains("actionParameters") && action_json["actionParameters"].is_array())
                 {
